@@ -8,7 +8,7 @@ sources:
       - name: categories
       - name: customers
       - name: employee_territories
-      - name: employee
+      - name: employees
       - name: order_details
       - name: orders
       - name: products
