@@ -11,6 +11,7 @@ WORKDIR /usr/src/dbt/dbt_project
 
 # Copy the dbt project files
 COPY ./dbt_from_scratch/dbt_project /usr/src/dbt/dbt_project
+COPY ./dbt_from_scratch/app/app.py /app/
 COPY ./dbt_from_scratch/app/requirements.txt /app/
 
 # Install Python dependencies
