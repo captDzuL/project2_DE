@@ -1,0 +1,13 @@
+dbt_from_scratch:
+  target: dev
+  outputs:
+    dev:
+      dbname: db_project2
+      host: localhost
+      pass: admin
+      port: 5432
+      schema: public
+      threads: 1
+      type: postgres
+      user: postgres
+  

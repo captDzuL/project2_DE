@@ -1,0 +1,28 @@
+name: 'dbt_from_scratch'
+version: 2
+config-version: 2
+
+profile: 'dbt_from_scratch'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  dbt_from_scratch:
+    staging:
+      +schema: raw_data
+      +materialized: table
+    warehouse:
+      +schema: data_warehouse
+      +materialized: table
+    marts:
+      +schema: data_mart
+      +materialized: table

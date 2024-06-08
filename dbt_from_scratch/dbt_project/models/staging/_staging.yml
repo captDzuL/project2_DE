@@ -1,0 +1,73 @@
+version: 2
+
+sources:
+  - name: raw_category
+  - name: raw_customer
+  - name: raw_employee_territories
+  - name: raw_employee
+  - name: raw_order_details
+  - name: raw_orders
+  - name: raw_product
+  - name: raw_regions
+  - name: raw_shippers
+  - name: raw_suppliers
+  - name: raw_territories
+
+models:
+  - name: raw_category
+    description: "Staging model for raw_category"
+    tests:
+      - not_null:
+          - categoryID
+          - categoryName
+
+  - name: raw_customer
+    description: "Staging model for raw_customer"
+    tests:
+      - not_null:
+          - customerID
+
+  - name: raw_employee
+    description: "Staging model for raw_employee"
+    tests:
+      - not_null:
+          - employeeID
+
+  - name: raw_orders
+    description: "Staging model for raw_orders"
+    tests:
+      - not_null:
+          - orderID
+
+  - name: raw_product
+    description: "Staging model for raw_product"
+    tests:
+      - not_null:
+          - productID
+
+  - name: raw_regions
+    description: "Staging model for raw_regions"
+    tests:
+      - not_null:
+          - regionID
+  
+  - name: raw_shippers
+    description: "Staging model for raw_shippers"
+    tests:
+      - not_null:
+          - shipperID
+
+  - name: raw_suppliers
+    description: "Staging model for raw_suppliers"
+    tests:
+      - not_null:
+          - supplierID
+
+  - name: raw_shippers
+    description: "Staging model for raw_shippers"
+    tests:
+      - not_null:
+          - shipperID
+
+  - name: raw_order_details
+    description: "Staging model for raw_order_details"
