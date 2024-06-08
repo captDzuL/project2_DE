@@ -1,5 +1,5 @@
 name: 'dbt_from_scratch'
-version: 2
+version: 1
 config-version: 2
 
 profile: 'dbt_from_scratch'

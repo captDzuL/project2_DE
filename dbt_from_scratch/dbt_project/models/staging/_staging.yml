@@ -1,4 +1,4 @@
-version: 2
+version: 1.0.0
 
 sources:
   - name: raw_category
@@ -63,11 +63,8 @@ models:
       - not_null:
           - supplierID
 
-  - name: raw_shippers
-    description: "Staging model for raw_shippers"
-    tests:
-      - not_null:
-          - shipperID
+  - name: raw_territories
+    description: "Staging model for raw_territories"
 
   - name: raw_order_details
     description: "Staging model for raw_order_details"

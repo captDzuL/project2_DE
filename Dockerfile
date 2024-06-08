@@ -19,7 +19,7 @@ RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r /app/requirements.txt
 
 # Copy the dbt profiles.yml
-COPY ./dbt_from_scratch/profiles.yml /root/.dbt/profiles.yml
+COPY ./dbt_from_scratch/dbt_project/profiles/profiles.yml /root/.dbt/profiles.yml
 
 # Check dbt_project.yml
 RUN cat /usr/src/dbt/dbt_project/dbt_project.yml
