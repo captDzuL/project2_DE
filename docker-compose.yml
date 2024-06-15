@@ -20,4 +20,4 @@ services:
       postgres:
         condition: service_healthy
     volumes:
-      - ./dbt_from_scratch/dbt_project:/usr/src/dbt/dbt_project
+      - ./dbt_from_scratch/dbt_project:/usr/src/dbt

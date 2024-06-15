@@ -7,7 +7,7 @@ RUN apt-get update && \
     apt-get clean
 
 # Set the working directory
-WORKDIR /usr/src/dbt/dbt_project
+WORKDIR /usr/src/dbt
 
 # Copy the dbt project files
 COPY ./dbt_from_scratch/dbt_project /usr/src/dbt/dbt_project
@@ -21,6 +21,9 @@ RUN pip install --upgrade pip && \
 
 # Copy the dbt profiles.yml
 COPY ./dbt_from_scratch/dbt_project/profiles/profiles.yml /root/.dbt/profiles.yml
+
+#Create table from csv on github
+RUN cat /app/app.py
 
 # Check dbt_project.yml
 RUN cat /usr/src/dbt/dbt_project/dbt_project.yml
